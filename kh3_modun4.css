@@ -1,0 +1,115 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background: #fff5fa;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  padding: 20px 10px;
+  background: #ffe6f0;
+}
+
+h1 {
+  color: #f3739e;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 1rem;
+  line-height: 1.5;
+  max-width: 700px;
+  margin: 0 auto 20px auto;
+}
+
+#gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* luôn 2 cột */
+  gap: 20px;
+  padding: 15px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  border: 2px solid #ccc;
+  border-radius: 8px; /* ảnh bo góc đẹp */
+  transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
+
+.gallery-item img:hover,
+.gallery-item img:focus {
+  transform: scale(1.05);
+  border-color: #f3739e;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.25);
+  outline: none;
+}
+
+.gallery-item p {
+  margin-top: 8px;
+  font-size: 1rem;
+  color: #555;
+  font-weight: 500;
+}
+
+@media (min-width: 480px) {
+  #gallery {
+    grid-template-columns: repeat(2, 1fr); /* 2 cột cho mobile lớn */
+  }
+}
+
+@media (min-width: 768px) {
+  #gallery {
+    grid-template-columns: repeat(3, 1fr); /* 3 cột cho tablet */
+  }
+
+  .gallery-item img {
+    border-radius: 10px;
+  }
+
+  header p {
+    font-size: 1.1rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  #gallery {
+    grid-template-columns: repeat(4, 1fr); /* 4 cột desktop nhỏ */
+  }
+
+  body {
+    font-size: 18px;
+  }
+
+  header p {
+    font-size: 1.15rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  #gallery {
+    grid-template-columns: repeat(6, 1fr); /* 6 cột desktop lớn */
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  header p {
+    font-size: 1.2rem;
+  }
+}
+
+footer {
+  background: #ffe6f0;
+  padding: 15px 10px;
+  font-size: 0.9rem;
+  color: #555;
+}
